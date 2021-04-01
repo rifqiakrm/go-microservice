@@ -63,7 +63,7 @@ protoc -I pb/user/ --go_out=pb/user/ pb/user/user.proto
     User=root
     Group=www-data
     Environment="GOPATH=/var/www/"
-    Environment="KELILINQ_ENV=configs/{your_config_env}"
+    Environment="PROJECT_ENV=configs/{your_config_env}"
     ExecStart=/var/www/{application_build_file}
     [Install]
     WantedBy=multi-user.target
