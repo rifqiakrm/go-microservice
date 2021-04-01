@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package sample;
+
+option go_package = "github.com/rifqiakrm/go-microservice/pb/sample";
+
+message GetHelloWorldRequest {
+  string name = 1;
+}
+
+message GetHelloWorldResponse {
+  string message = 1;
+}
+
+service SampleService {
+  rpc GetHelloWorld(GetHelloWorldRequest) returns (GetHelloWorldResponse) {}
+}
